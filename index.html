@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Ace Conglomerate Inc.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.theme.css" rel='stylesheet'>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+      
+  body { 
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #7a00f4;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color:#7a00f4 ;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color:#7a00f4 ;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #7a00f4;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: candara;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color:#7a00f4 ;
+      font-size: 50px;
+  }
+  .logo {
+      color:#7a00f4 ;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color:#7a00f4;
+  }
+  .carousel-indicators li {
+      border-color:#7a00f4 ;
+  }
+  .carousel-indicators li.active {
+      background-color:#7a00f4 ;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #7a00f4; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid indigo ;
+      background-color: #fff !important;
+      color:indigo ;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: indigo !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color:#7a00f4;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color:#7a00f4;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family:candara;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color:burlywood !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color:indigo ;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#myPage">ACE CONGLOMERATE</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about"><span class="glyphicon glyphicon-flag"></span> ABOUT</a></li>
+                <li><a href="#ricefarm"><span class="glyphicon glyphicon-certificate"></span> RICE FARMING</a></li>
+                <li><a href="#acepoultry"><span class="glyphicon glyphicon-bell"></span> ACE POULTRY</a></li>
+                <li><a href="#aceclothings"><span class="glyphicon glyphicon-scissors"></span> ACE CLOTHINGS</a></li>               
+                <li><a href="#contact"><span class="glyphicon glyphicon-earphone"></span> CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="jumbotron text-center">
+                <h1 style='font-family:century gothic;'>ACE CONGLOMERATE</h1> 
+                <p>... Feeding The Nation</p>
+                <form class="form-inline">
+                        <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+                        <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#mymodal">Subscribe</button>
+                         <!-- Modal -->
+  <div class="modal fade" id="mymodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title" style="font-family:candara;">Welcome To Ace Conglomerate</h2>
+        </div>
+        <div class="modal-body">
+          <p style="color:black; font-size:10px";>You Have Successfully Registered To <b>ACE CONGLOMERATE.</b>A Mail Has Been Sent To Your Registered Email Address!Please Click The Link On The Mail To Refer You To Your DashBoard!Check Your Spam Folder!  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>          
+                      </form>
+                    </div>
+                    <!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 style='font-family:century gothic;'>ACE CONGLOMERATE</h2><br>
+            <h4 style='font-family:century gothic'>Ace Conglomerate Is A Business Organisation Based In Nigeria Specialised In Farming And Making Shelter For Consumers!We Make It At An Affordable Price To Meet Your Needs!</p>
+            <br><button class="btn btn-default btn-lg">Learn More</button>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="conect.jpg" alt="San Francisco" width="400" height="300">
+          </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid bg-grey ">
+            <div class="row">
+              <div class="col-sm-8">
+                <h2 style="font-family:century gothic;">OUR VALUES</h2><br>
+                <h4 style='font-family:century gothic'><strong>MISSION:</strong>Our Mission Is To Battle With  The Starvation  And Helping The Nigerian People In This Economic Crises
+                <h4><p style='font-family:century gothic'><strong>VISION:</strong>Our Vision Is To Be Recognised As The Best Farm Producing Company Of Cereals And Clothings All Over Africa!</h4>
+                </div>
+                    <div class="col-sm-4">
+                            <div class="thumbnail">
+                                <img src="name.jpg" alt="San Francisco" width="400" height="300">
+                          </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+          <div id="ricefarm" class="container-fluid">
+          <div class="container-fluid ">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 style="font-family:century gothic;">RICE FARMING</h2><br>
+                    <h4 style='font-family:century gothic;'>Rice Is A Good Source Of Carbohydrate,It Strengthens The Bones And Give The Body Energy.At Ace Farms,We Have Hectares Of Lands Where Rice Is Planted,Harvested,Processed,And Sold To Consumers.Quality Nigerian Rice At A Cheaper And A Very Delicious Meal For The Family</h4>
+                     <br><a href="ricefarm.html"><button style="font-family:century gothic;"class="btn btn-default btn-lg">Learn More</button> </a>
+                       </div>
+                  <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="london.jpg" alt="San Francisco" width="500" height="800">
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="acepoultry" class="container-fluid">
+                <div class="container-fluid ">
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <h2 style="font-family:century gothic;">ACE POULTRY</h2><br>
+                          <h4 style='font-family:century gothic;'>EveryBody Knows That Chicken Is A Good Source Of Protein.We Offer Eggs And Healthy Broiler,Cockerel,And Layers For Consumption!Ace Poultry Provide Big Eggs At Cheaper Prices </h4>
+                           <br><a href="acepoultry.html"><button style="font-family:century gothic;"class="btn btn-default btn-lg">Learn More</button> </a>
+                             </div>
+                        <div class="col-sm-4">
+                              <div class="thumbnail">
+                                  <img src="hen.jpg" alt="San Francisco" width="500" height="800">
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="aceclothings" class="container-fluid">
+                    <div class="container-fluid ">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <h2 style="font-family:century gothic;">ACE CLOTHINGS</h2><br>
+                              <h4 style='font-family:century gothic;'>EveryBody Wants To Rock The Best Attire And Wear The Latest Western Wears,Our Trained Fashion Designers Make The Very Best Of Afrikaan Attire And We Also Customize T-Shirt For Birthdays And Special Occasions!We Give The Best. </h4>
+                               <br><a href="aceclothings2.html"><button style="font-family:century gothic;"class="btn btn-default btn-lg">Learn More</button> </a>
+                                 </div>
+                            <div class="col-sm-4">
+                                  <div class="thumbnail">
+                                      <img src="class.jpg" alt="San Francisco" width="500" height="800">
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center"style="font-family:century gothic;">CONTACT</h2>
+        <div class="row">
+          <div class="col-sm-5">
+            <p style="font-family:century gothic;">Contact us and we'll get back to you within 24 hours.</p>
+            <p style="font-family:century gothic;"><span class="glyphicon glyphicon-map-marker"></span> Lokoja,NG</p>
+            <p style="font-family:century gothic;"><span class="glyphicon glyphicon-phone"></span><strong>Customer Care Line</strong>  +234 9074420140</p>
+            <p style="font-family:century gothic;"><span class="glyphicon glyphicon-envelope"></span>info@aceconglomerate.com</p>	   
+          </div>
+          <div class="col-sm-7 slideanim">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-right" type="submit" style="font-family:candara;">Send</button>
+              </div>
+            </div>	
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-3">
+        <img src="download.jpg">
+          </div>
+          
+          <div class="col-sm-3">
+        <img src="logo.png" style="margin-left:350px;">
+          </div>
+          <br><br><br>
+          <div class="col-sm-3">
+        <img src="l.png" style="margin-right:100px;">
+      </div>
+      <div class="col-sm-3">
+          <img src="images.jpg" style="margin-left:400px;">
+    </div>
+  </div>
+                    <div id="googleMap" style="height:50px;width:100%;"></div>
+                    
+                    <!-- Add Google Maps -->
+                    <script src="http://maps.googleapis.com/maps/api/js"></script>
+                    <script>
+                    var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+                    
+                    function initialize() {
+                    var mapProp = {
+                      center:myCenter,
+                      zoom:12,
+                      scrollwheel:false,
+                      draggable:false,
+                      mapTypeId:google.maps.MapTypeId.ROADMAP
+                      };
+                    
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    
+                    var marker = new google.maps.Marker({
+                      position:myCenter,
+                      });
+                    
+                    marker.setMap(map);
+                    }
+                    
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                    </script>
+                    
+                    <footer class="container-fluid text-center">
+                      <a href="#myPage" title="To Top">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                      </a>
+                      <p style="font-family:candara;">ACE CONGLOMERATE</a></p>		
+                    </footer>
+                    
+                    <script>
+                    $(document).ready(function(){
+                      // Add smooth scrolling to all links in navbar + footer link
+                      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+                    
+                        // Store hash
+                        var hash = this.hash;
+                    
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                          scrollTop: $(hash).offset().top
+                        }, 900, function(){
+                       
+                          // Add hash (#) to URL when done scrolling (default click behavior)
+                          window.location.hash = hash;
+                        });
+                      });
+                      
+                      $(window).scroll(function() {
+                        $(".slideanim").each(function(){
+                          var pos = $(this).offset().top;
+                    
+                          var winTop = $(window).scrollTop();
+                            if (pos < winTop + 600) {
+                              $(this).addClass("slide");
+                            }
+                        });
+                      });
+                    })
+                    </script>
+                    
