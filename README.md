@@ -1,4 +1,4 @@
 # ace-conglomerate
-a business website
+its a company website
 
 ### [Continue to Website](https://mavikeyz.github.io/ace-conglomerate/index.html)
